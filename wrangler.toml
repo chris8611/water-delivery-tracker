@@ -1,0 +1,16 @@
+name = "water-delivery-tracker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "WATER_KV"
+preview_id = "c3b58fa3531f48ca82c052a915d2a118"
+id = "8a270abc15ef4572b1b045550f22077e"
+
+[env.development]
+name = "water-delivery-tracker-dev"
+
+[[env.development.kv_namespaces]]
+binding = "WATER_KV"
+preview_id = "c3b58fa3531f48ca82c052a915d2a118"
+id = "8a270abc15ef4572b1b045550f22077e"

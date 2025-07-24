@@ -1,0 +1,24 @@
+{
+  "name": "water-delivery-tracker",
+  "version": "1.0.0",
+  "description": "桶装水送水记录系统 - Cloudflare Workers应用",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "kv:namespace:create": "wrangler kv:namespace create WATER_KV",
+    "kv:namespace:create:preview": "wrangler kv:namespace create WATER_KV --preview"
+  },
+  "keywords": [
+    "cloudflare-workers",
+    "water-delivery",
+    "kv-storage",
+    "tracking-system"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^4.25.1"
+  }
+}
