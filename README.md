@@ -6,19 +6,14 @@
 
 一个基于 Cloudflare Workers 和 KV 存储的现代化桶装水送水记录管理系统。采用无服务器架构，支持全球部署，提供实时数据同步和响应式用户界面。
 
-## 🌟 在线演示
-
-[🔗 查看在线演示](https://water-delivery-tracker.chrisa.workers.dev)
-
-> **登录信息**：用户名 `hack`，密码 `Xx147258.`
 
 ## 📸 项目截图
 
-### 桌面端界面
-![桌面端界面](https://via.placeholder.com/800x600/2196F3/ffffff?text=Desktop+Interface)
 
-### 移动端界面
-![移动端界面](https://via.placeholder.com/400x800/21CBF3/ffffff?text=Mobile+Interface)
+
+<img width="1064" height="781" alt="image" src="https://github.com/user-attachments/assets/30034b1a-35e4-485e-8864-362e636b9500" />
+
+<img width="1064" height="736" alt="image" src="https://github.com/user-attachments/assets/9a230ced-35d0-4a5e-903d-b1fce1115af8" />
 
 ## ✨ 功能特性
 
@@ -122,7 +117,7 @@ npm run deploy
 ### 主要功能
 
 #### 🔐 用户登录
-- 使用用户名 `hack` 和密码 `Xx147258.` 登录系统
+- 使用用户名和密码登录系统
 - 登录状态会在浏览器中保持，无需重复登录
 
 #### 📝 记录送水
@@ -148,8 +143,8 @@ POST /api/login
 Content-Type: application/json
 
 {
-  "username": "hack",
-  "password": "Xx147258."
+  "username": "",
+  "password": ""
 }
 ```
 
@@ -304,7 +299,7 @@ npx wrangler kv:key get "status" --binding WATER_KV
 3. 确认 API 请求是否成功
 
 #### 登录失败
-- 确认用户名和密码正确（`hack` / `Xx147258.`）
+- 确认用户名和密码正确（`` / ``）
 - 清除浏览器缓存和 localStorage
 - 检查网络连接
 
