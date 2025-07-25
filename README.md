@@ -6,19 +6,22 @@
 
 一个基于 Cloudflare Workers 和 KV 存储的现代化桶装水送水记录管理系统。采用无服务器架构，支持全球部署，提供实时数据同步和响应式用户界面。
 
+<<<<<<< HEAD
 ## 🌟 在线演示
 
 [🔗 查看在线演示](https://water-delivery-tracker.chrisa.workers.dev)
 
 > **登录信息**：请在 Cloudflare Workers 环境变量中设置 `USERNAME` 和 `PASSWORD`
+=======
+>>>>>>> 416a778d6e502fbc02c88cfd680ebd87eb9510e5
 
 ## 📸 项目截图
 
-### 桌面端界面
-![桌面端界面](https://via.placeholder.com/800x600/2196F3/ffffff?text=Desktop+Interface)
 
-### 移动端界面
-![移动端界面](https://via.placeholder.com/400x800/21CBF3/ffffff?text=Mobile+Interface)
+
+<img width="1064" height="781" alt="image" src="https://github.com/user-attachments/assets/30034b1a-35e4-485e-8864-362e636b9500" />
+
+<img width="1064" height="736" alt="image" src="https://github.com/user-attachments/assets/9a230ced-35d0-4a5e-903d-b1fce1115af8" />
 
 ## ✨ 功能特性
 
@@ -144,7 +147,11 @@ npm run deploy
 ### 主要功能
 
 #### 🔐 用户登录
+<<<<<<< HEAD
 - 使用在环境变量中设置的用户名和密码登录系统
+=======
+- 使用用户名和密码登录系统
+>>>>>>> 416a778d6e502fbc02c88cfd680ebd87eb9510e5
 - 登录状态会在浏览器中保持，无需重复登录
 
 #### 📝 记录送水
@@ -170,8 +177,13 @@ POST /api/login
 Content-Type: application/json
 
 {
+<<<<<<< HEAD
   "username": "your-username",
   "password": "your-password"
+=======
+  "username": "",
+  "password": ""
+>>>>>>> 416a778d6e502fbc02c88cfd680ebd87eb9510e5
 }
 ```
 
@@ -326,7 +338,11 @@ npx wrangler kv:key get "status" --binding WATER_KV
 3. 确认 API 请求是否成功
 
 #### 登录失败
+<<<<<<< HEAD
 - 确认环境变量中的用户名和密码设置正确
+=======
+- 确认用户名和密码正确（`` / ``）
+>>>>>>> 416a778d6e502fbc02c88cfd680ebd87eb9510e5
 - 清除浏览器缓存和 localStorage
 - 检查网络连接
 
