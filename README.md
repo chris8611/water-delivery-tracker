@@ -13,7 +13,7 @@
 
 > **登录信息**：请在 Cloudflare Workers 环境变量中设置 `USERNAME` 和 `PASSWORD`
 =======
->>>>>>> 416a778d6e502fbc02c88cfd680ebd87eb9510e5
+>
 
 ## 📸 项目截图
 
@@ -151,7 +151,9 @@ npm run deploy
 - 使用在环境变量中设置的用户名和密码登录系统
 =======
 - 使用用户名和密码登录系统
->>>>>>> 416a778d6e502fbc02c88cfd680ebd87eb9510e5
+
+
+
 - 登录状态会在浏览器中保持，无需重复登录
 
 #### 📝 记录送水
@@ -183,7 +185,7 @@ Content-Type: application/json
 =======
   "username": "",
   "password": ""
->>>>>>> 416a778d6e502fbc02c88cfd680ebd87eb9510e5
+
 }
 ```
 
@@ -342,7 +344,6 @@ npx wrangler kv:key get "status" --binding WATER_KV
 - 确认环境变量中的用户名和密码设置正确
 =======
 - 确认用户名和密码正确（`` / ``）
->>>>>>> 416a778d6e502fbc02c88cfd680ebd87eb9510e5
 - 清除浏览器缓存和 localStorage
 - 检查网络连接
 
