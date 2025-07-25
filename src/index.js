@@ -210,7 +210,7 @@ async function handleLogin(request, env) {
   const { username, password } = data;
   
   // Check credentials
-  if (username === 'hack' && password === 'Xx147258.') {
+  if (username === env.USERNAME && password === env.PASSWORD) {
     return new Response(JSON.stringify({ 
       success: true, 
       message: '登录成功'

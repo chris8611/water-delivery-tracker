@@ -10,7 +10,7 @@
 
 [🔗 查看在线演示](https://water-delivery-tracker.chrisa.workers.dev)
 
-> **登录信息**：用户名 `hack`，密码 `Xx147258.`
+> **登录信息**：请在 Cloudflare Workers 环境变量中设置 `USERNAME` 和 `PASSWORD`
 
 ## 📸 项目截图
 
@@ -101,7 +101,29 @@ id = "your-production-id"       # 替换为实际的生产 ID
 
 > 💡 **提示**：KV 命名空间 ID 可以在创建命令的输出中找到，或在 [Cloudflare Dashboard](https://dash.cloudflare.com/) 的 Workers & Pages > KV 部分查看。
 
-#### 6. 本地开发
+#### 6. 设置环境变量
+
+在 Cloudflare Workers 中设置以下环境变量：
+
+**方法一：通过 Cloudflare Dashboard**
+1. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
+2. 进入 Workers & Pages
+3. 选择你的 Worker
+4. 点击「Settings」→「Variables」
+5. 添加以下环境变量：
+   - `USERNAME`: 你的登录用户名
+   - `PASSWORD`: 你的登录密码
+
+**方法二：通过 wrangler.toml 配置**
+```toml
+[env.production.vars]
+USERNAME = "your-username"
+PASSWORD = "your-password"
+```
+
+> ⚠️ **安全提示**：不要将敏感信息提交到代码仓库中。建议使用 Cloudflare Dashboard 设置环境变量。
+
+#### 7. 本地开发
 
 ```bash
 npm run dev
@@ -109,7 +131,7 @@ npm run dev
 
 访问 `http://localhost:8787` 查看本地开发环境。
 
-#### 7. 部署到 Cloudflare
+#### 8. 部署到 Cloudflare
 
 ```bash
 npm run deploy
@@ -122,7 +144,7 @@ npm run deploy
 ### 主要功能
 
 #### 🔐 用户登录
-- 使用用户名 `hack` 和密码 `Xx147258.` 登录系统
+- 使用在环境变量中设置的用户名和密码登录系统
 - 登录状态会在浏览器中保持，无需重复登录
 
 #### 📝 记录送水
@@ -148,8 +170,8 @@ POST /api/login
 Content-Type: application/json
 
 {
-  "username": "hack",
-  "password": "Xx147258."
+  "username": "your-username",
+  "password": "your-password"
 }
 ```
 
@@ -304,7 +326,7 @@ npx wrangler kv:key get "status" --binding WATER_KV
 3. 确认 API 请求是否成功
 
 #### 登录失败
-- 确认用户名和密码正确（`hack` / `Xx147258.`）
+- 确认环境变量中的用户名和密码设置正确
 - 清除浏览器缓存和 localStorage
 - 检查网络连接
 
